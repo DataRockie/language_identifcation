@@ -37,7 +37,7 @@ print"total_features", total_features
 ##x_all = np.vstack([voice_data[-1]]).astype(np.float)
 x_all = np.vstack(voice_data.ix[:,-1]).astype(np.float)
 print "x_all",x_all
-y_all = voice_data([voice_data.columns[-1]], axis=1).values
+y_all = voice_data.drop([voice_data.columns[-1]], axis=1).values
 y_all = voice_data.drop('ImageId', axis=1).values
 
 print "y_all", y_all
